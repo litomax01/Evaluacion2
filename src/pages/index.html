@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evaluación - Proyecto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <h1>sdsd</h1>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1D4ED8',
+                        secondary: '#64748B',
+                        accent: '#22C55E',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
-<body>
-    
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-900 text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-4">
+                <img src="logo1.webp" alt="Logo Empresa" class="rounded-full">
+                <h1 class="text-2xl font-bold">Mi Empresa</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-primary transition duration-300">Inicio</a>
+                <a href="#servicios" class="hover:text-primary transition duration-300">Servicios</a>
+                <a href="#productos" class="hover:text-primary transition duration-300">Productos</a>
+                <a href="#contacto" class="hover:text-primary transition duration-300">Contacto</a>
+            </nav>
+            <button id="menu-button" class="block md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden bg-gray-800 text-white md:hidden">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-700">Inicio</a>
+            <a href="#servicios" class="block px-4 py-2 hover:bg-gray-700">Servicios</a>
+            <a href="#productos" class="block px-4 py-2 hover:bg-gray-700">Productos</a>
+            <a href="#contacto" class="block px-4 py-2 hover:bg-gray-700">Contacto</a>
+        </div>
+    </header>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
+
 </html>
