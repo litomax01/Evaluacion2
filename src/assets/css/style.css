@@ -2,3 +2,14 @@
     width: 100px;
     height: 100px;
 }
+
+#precios {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ff0000; 
+}
+
+#servicios   {
+    font-size: 1rem;
+    color: #025cf7;
+}
